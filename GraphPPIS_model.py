@@ -82,8 +82,8 @@ def load_graph(sequence_name):
     if MAP_TYPE == "d":
         adjacency_matrix = mask.astype(np.int)
     elif MAP_TYPE == "c":
-        dismap = mask * dismap
         adjacency_matrix = norm_dis(dismap)
+        adjacency_matrix = mask * adjacency_matrix
     norm_matrix = normalize(adjacency_matrix.astype(np.float32))
     return norm_matrix
 
