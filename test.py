@@ -6,7 +6,7 @@ from GraphPPIS_model import *
 
 # Path
 Dataset_Path = "./Dataset/"
-Model_Path = "./Model/slow_version/"
+Model_Path = "./Model/"
 
 
 def evaluate(model, data_loader):
@@ -138,8 +138,8 @@ def main():
     with open(Dataset_Path + "Test_60.pkl", "rb") as f:
         Test_60 = pickle.load(f)
 
-    with open(Dataset_Path + "Test_331.pkl", "rb") as f:
-        Test_331 = pickle.load(f)
+    with open(Dataset_Path + "Test_315.pkl", "rb") as f:
+        Test_315 = pickle.load(f)
 
     with open(Dataset_Path + "UBtest_31.pkl", "rb") as f:
         UBtest_31 = pickle.load(f)
@@ -154,8 +154,8 @@ def main():
     print("Evaluate GraphPPIS on Test_60")
     test_one_dataset(Test_60)
 
-    print("Evaluate GraphPPIS on Test_331")
-    test_one_dataset(Test_331)
+    print("Evaluate GraphPPIS on Test_315")
+    test_one_dataset(Test_315)
 
     print("Evaluate GraphPPIS on Btest_31")
     test_one_dataset(Btest_31)
